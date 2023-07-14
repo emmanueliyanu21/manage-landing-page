@@ -30,6 +30,9 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="image-pattern">
+        <img src="./images/bg-tablet-pattern.svg" alt="" />
+      </div>
       <div class="container">
         <div class="navbar-wrapper">
           <div>
@@ -55,8 +58,18 @@
             <li><a class="menuItem" href="#">Community</a></li>
           </ul>
           <button class="hamburger">
-            <img class="menuIcon material-icons" src="./images/icon-hamburger.svg" alt="" srcset="">
-            <img class="closeIcon material-icons" src="./images/icon-close.svg" alt="" srcset="">
+            <img
+              class="menuIcon material-icons"
+              src="./images/icon-hamburger.svg"
+              alt=""
+              srcset=""
+            />
+            <img
+              class="closeIcon material-icons"
+              src="./images/icon-close.svg"
+              alt=""
+              srcset=""
+            />
           </button>
         </div>
       </div>
@@ -85,6 +98,9 @@
             complexity. Our software is tailor-made for modern digital product
             teams.
           </p>
+          <div class="testimonial-pattern">
+            <img src="./images/bg-tablet-pattern.svg" alt="" />
+          </div>
         </div>
         <div>
           <div class="service-details service-details-topper">
@@ -136,6 +152,7 @@
       <section>
         <div class="container testimonial">
           <h2 class="testimonial-header">What they’ve said</h2>
+          
           <div class="testimonial-wrapper">
             <div class="testimonial-content">
               <img src="./images/avatar-anisha.png" alt="" />
@@ -219,8 +236,15 @@
               </ul>
             </div>
             <div class="footer-input">
-              <input type="text" placeholder="Updates in your inbox…" />
-              <button class="btn-go">Go</button>
+              <form id="newsletter-post">
+                <input
+                  type="email"
+                  id="email-input"
+                  placeholder="Updates in your inbox…"
+                />
+                <button type="submit" class="btn-go">Go</button>
+                <p id="error-message" style="display: none"></p>
+              </form>
               <p>Copyright 2020. All Rights Reserved</p>
             </div>
           </div>

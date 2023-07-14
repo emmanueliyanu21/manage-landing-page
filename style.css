@@ -18,10 +18,39 @@ body {
   z-index: 999;
 }
 
+.image-pattern {
+  text-align: right;
+  right: 0;
+  margin-right: -25px;
+  position: absolute;
+  margin-top: -70px;
+  z-index: -1;
+}
+
+.image-pattern img {
+  max-width: 70%;
+  width: 100%;
+}
+
 .wrapper {
+  position: relative;
   max-width: 1440px;
   margin: auto;
   background-color: var(--white);
+  overflow: hidden;
+  z-index: -1;
+}
+
+.testimonial-pattern {
+  position: absolute;
+  left: -300px;
+  margin-top: 40px;
+  z-index: -1;
+}
+
+.testimonial-pattern img {
+  max-width: 70%;
+  width: 100%;
 }
 
 .container {
@@ -33,6 +62,7 @@ body {
   justify-content: space-between;
   padding: 20px 0px;
   align-items: center;
+  z-index: 999;
 }
 
 .navbar-wrapper ul li {
@@ -49,13 +79,16 @@ body {
   font-size: 12px;
   border: none;
   border-radius: 100px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  box-shadow: 1px 2px 3px 2px (rgb(163, 163, 163));
 }
 
 .mobile-navigation {
   display: none;
 }
-
-/*  */
 
 .heropage-wrapper {
   display: flex;
@@ -83,7 +116,6 @@ p {
   font-weight: 200;
 }
 
-/*  */
 .service-wrapper {
   padding-top: 30px;
   display: grid;
@@ -128,8 +160,6 @@ p {
 .digit {
   display: none;
 }
-
-/*  */
 
 .testimonial-wrapper {
   display: flex;
@@ -180,8 +210,6 @@ p {
   margin: 30px;
 }
 
-/*  */
-
 .extra-content {
   background-color: var(--bright-red);
   display: flex;
@@ -204,8 +232,6 @@ p {
   background-color: var(--white);
   color: var(--bright-red);
 }
-
-/*  */
 
 .footer-wrapper {
   background-color: var(--dark-blue);
@@ -284,8 +310,6 @@ p {
   padding: 20px 0px;
 }
 
-/*  */
-
 @media screen and (max-width: 768px) {
   .container {
     padding: 0px 0px;
@@ -305,7 +329,6 @@ p {
     cursor: pointer;
   }
 
-  /*  */
   .service-details {
     display: unset;
     align-items: unset;
@@ -326,7 +349,7 @@ p {
   .service-header h2 {
     width: unset !important;
   }
-  /*  */
+
   .number {
     display: none;
   }
@@ -348,7 +371,6 @@ p {
   .service-wrapper {
     grid-template-columns: auto;
   }
-  /*  */
   .testimonial-content {
     min-width: fit-content;
     padding: 0px 10px;
@@ -356,7 +378,6 @@ p {
   .testimonial-content p {
     max-width: unset !important;
   }
-  /*  */
   .extra-content h2 {
     font-size: 32px;
     font-weight: 400px;
@@ -371,7 +392,6 @@ p {
     margin: auto;
     padding-bottom: 20px;
   }
-  /*  */
   .footer {
     flex-wrap: wrap-reverse;
     margin: auto;
@@ -486,6 +506,9 @@ p {
 }
 
 @media screen and (max-width: 1100px) {
+  .testimonial-pattern {
+    display: none;
+  }
   .hero-header h2 {
     font-size: 32px;
     margin: auto;

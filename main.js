@@ -25,3 +25,30 @@ menuItems.forEach(
     menuItem.addEventListener("click", toggleMenu);
   }
 )
+
+document.getElementById('newsletter-post').addEventListener('submit', function(event){
+  e.preventDefault();
+
+  let emailInput = document.getElementById("email-input");
+  let errorMessage = document.getElementById("error-message");
+
+  var email = emailInput.value.trim();
+
+  if(email === ''){
+    errorMessage.textContent = 'Please enter a email address'
+    errorMessage.style.display = 'block'
+    return
+  }
+
+  if(!validateEmail(email)){
+    errorMessage.textContent = 'Please enter a valid email address'
+    errorMessage.style.display = 'block'
+  }
+
+  errorMessage.style.display = 'none'
+})
+
+function validateEmail(email){
+  let validReg =  /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+  return validReg.test(email)
+}
